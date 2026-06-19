@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Booking Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Ride - Rural Transport Connect</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f4f4;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin-top:10px;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:green;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+#success{
+display:none;
+text-align:center;
+margin-top:20px;
+color:green;
+font-weight:bold;
+}
+</style>
 </head>
+
 <body>
-    <h1>Booking Page</h1>
-    <p>Welcome to Rural Transport Connect Booking Service</p>
+
+<div class="container">
+
+<h1>Book Your Ride</h1>
+
+<form onsubmit="showMessage(); return false;">
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Phone Number</label>
+<input type="tel" required>
+
+<label>Pickup Location</label>
+<input type="text" required>
+
+<label>Destination</label>
+<input type="text" required>
+
+<label>Travel Date</label>
+<input type="date" required>
+
+<label>Vehicle Type</label>
+<select required>
+<option>Bus</option>
+<option>Auto</option>
+<option>Van</option>
+</select>
+
+<button type="submit">Book Now</button>
+
+</form>
+
+<div id="success">
+Booking Request Submitted Successfully ✅<br><br>
+Thank You For Using Rural Transport Connect 🚖
+</div>
+
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("success").style.display="block";
+}
+</script>
+
 </body>
 </html>
